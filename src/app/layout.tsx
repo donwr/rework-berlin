@@ -26,13 +26,10 @@ export const metadata: Metadata = {
   title: "Rework Berlin — Textile Circularity in Sport",
   description:
     "Mobile upcycling stations integrated into sports events. Turning sports textile waste into participatory sustainability experiences.",
-  keywords: [
-    "upcycling",
-    "textile circularity",
-    "sports sustainability",
-    "Berlin",
-    "workshops",
-  ],
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
