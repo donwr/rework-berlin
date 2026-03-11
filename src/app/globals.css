@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-forest: #2B4A2B;
+  --color-moss: #5A7A4A;
+  --color-sage-cream: #EDF0E8;
+  --color-warm-cream: #F0EBE0;
+  --color-charcoal: #1E1E1E;
+  --color-off-white: #F0E8D0;
+  --color-signal: #CC5833;
+  --color-signal-hover: #B54D2D;
+
+  --font-display: var(--font-cormorant-garamond), Georgia, serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --forest: #2B4A2B;
+  --moss: #5A7A4A;
+  --sage-cream: #EDF0E8;
+  --warm-cream: #F0EBE0;
+  --charcoal: #1E1E1E;
+  --off-white: #F0E8D0;
+  --signal: #CC5833;
+  --signal-hover: #B54D2D;
+  --max-w: 1280px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--sage-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Noise Overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero carousel crossfade keyframes */
+@keyframes progress-shrink {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
 }
