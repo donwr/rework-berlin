@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-dvh grid grid-cols-1 md:grid-cols-2 overflow-hidden bg-[var(--forest)]"
+      className="relative min-h-dvh grid grid-cols-1 md:grid-cols-2 overflow-hidden bg-[var(--hero-bg)]"
     >
       {/* Left side */}
       <div className="flex flex-col justify-between pt-[clamp(5rem,8vh,7rem)] pb-[clamp(2.5rem,4vh,3.5rem)] px-[clamp(2rem,4vw,4rem)] relative">
