@@ -63,7 +63,7 @@ export default function Hero() {
           <div className="flex gap-4 flex-wrap mt-2">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center font-[family-name:var(--font-dm-sans)] text-[0.8125rem] font-medium uppercase tracking-[0.06em] py-3.5 px-9 border-none cursor-pointer transition-all duration-300 bg-[var(--signal)] text-white hover:bg-[var(--signal-hover)] hover:scale-[1.03]"
+              className="inline-flex items-center justify-center font-[family-name:var(--font-dm-sans)] text-[0.8125rem] font-medium uppercase tracking-[0.06em] py-3.5 px-9 border-none cursor-pointer transition-all duration-300 bg-white text-[var(--charcoal)] hover:bg-[var(--signal)] hover:text-white hover:scale-[1.03]"
             >
               Partner With Us
             </a>
